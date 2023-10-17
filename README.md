@@ -1,4 +1,4 @@
-# Liberary
+# Library
 
 This is a assignment project of [Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library).
 
