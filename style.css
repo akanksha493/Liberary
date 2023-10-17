@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*:not(dialog){
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* height: 100vh; */
+    font-family: 'Roboto';
+    padding: 3rem;
+}
+.heading h1{
+    margin: 1rem 0rem;
+}
+.book-row{
+    background-color: teal;
+    border: 1px solid black;
+}
+.display table{
+    width: 100%;
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+}
+table td,th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+.delete-bttn{
+    background-color: rgb(191, 0, 0);
+    border: none;
+    padding: 0.5rem;
+    width: 5rem;
+    cursor: pointer;
+    color: white;
+}
+.delete-bttn:hover{
+    background-color:rgb(142, 2, 2);
+}
+.read-bttn{
+    border: none;
+    padding: 0.5rem;
+    width: 5rem;
+    cursor: pointer;
+    color: white;
+}
+.read-bttn.true{
+    background-color: teal;
+}
+.read-bttn.true:hover{
+    background-color: rgb(0, 96, 96);
+}
+.read-bttn.false{
+    background-color: tomato;
+}
+.read-bttn.false:hover{
+    background-color: rgb(192, 72, 50);
+}
+#add-book{
+    background-color: rgb(0, 21, 181);
+    color: white;
+    border: none;
+    width: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    font-size: 2.5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    transition: all ease-in 0.03s;
+}
+#add-book:hover{
+    background-color: rgb(1, 13, 109);
+    color: white;
+    font-size: 2.9rem;
+}
+dialog{
+    width: min(60vw,400px);
+    padding: 1rem;
+    border: 1px solid black;
+}
+form p,
+fieldset{
+    margin-top: 0.5rem;
+}
+form p span,
+legend span{
+    color: red;
+}
+input:not(input[type="radio"]){
+    width:100%;
+    box-sizing: border-box;
+    padding: 0.3rem;
+}
+fieldset{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+.bttn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+#cancel,
+#submit{
+    border: none;
+    width: 6rem;
+    padding: 0.5rem 0rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+#no{
+    margin-left: 1rem;
+}
+#submit{
+    margin-left: 1rem;
+}

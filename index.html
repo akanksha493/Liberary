@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>This is your own personal library. Feel free to add books.</h1>
+    </div>
+    <div class="display">
+        <table>
+            <tr>
+                <th>Book Title</th>
+                <th>Book Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+                <th>Delete</th>
+            </tr>
+            <tbody id="table-rows"></tbody>
+            
+        </table>
+    </div>
+
+    <dialog>
+        <form action="" method="dialog">
+            <label for="title">
+                <p>Book Title <span>*</span> :</p>
+                <input type="text" id="title" required>
+            </label>
+            <label for="author">
+                <p>Book Author <span>*</span> :</p>
+                <input type="text" id="author">
+            </label>
+            <label for="pages">
+                <p>Number of Pages <span>*</span> :</p>
+                <input type="number" id="pages" required>
+            </label>
+            <fieldset>
+                <legend>Have you read it? <span>*</span></legend>
+                <label for="yes">
+                    <input type="radio" name="read" id="yes" required>
+                    Yes
+                </label>
+                <label for="no">
+                    <input type="radio" name="read" id="no">
+                    No
+                </label>
+            </fieldset>
+
+            <div class="bttn-container">
+                <button id="cancel">Cancel</button>
+                <button id="submit">Add</button>
+            </div>
+        </form>
+    </dialog>
+
+    <button id="add-book">+</button>
+    <script src="script.js"></script>
+</body>
+</html>
