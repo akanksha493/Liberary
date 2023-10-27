@@ -1,18 +1,19 @@
 
 let myLibrary = [];
 
-function Book(title, author, pages, read){
-    this.bookTitle = title;
-    this.bookAuthor = author;
-    this.noOfPages = pages;
-    this.read = read;
-}
-
-Book.prototype.info = function(){
-    if(!this.read){
-        return `The ${this.bookTitle} by ${this.bookAuthor}, ${this.noOfPages}, not read yet. `;
+class Book{
+    constructor(title, author,pages,read){
+        this.bookTitle = title;
+        this.bookAuthor = author;
+        this.noOfPages = pages;
+        this.read = read;
     }
-    return `The ${this.bookTitle} by ${this.bookAuthor}, ${this.noOfPages}, has been read. `;
+    info(){
+        if(!this.read){
+            return `The ${this.bookTitle} by ${this.bookAuthor}, ${this.noOfPages}, not read yet. `;
+        }
+        return `The ${this.bookTitle} by ${this.bookAuthor}, ${this.noOfPages}, has been read. `;
+    }
 }
 
 if(localStorage.getItem("mylib")!=null){
@@ -40,12 +41,10 @@ closeDialogBttn.addEventListener("click",function(){
 function displayLiberary(){
     const retrivedString = localStorage.getItem("mylib");
     const retrivedArray = JSON.parse(retrivedString);
-    // console.table(retrivedArray);
     const table = document.querySelector("#table-rows");
     table.innerHTML = "";
     let i=0;
     retrivedArray.forEach(element => {
-        // console.table(element);
         if(element.read){
             table.innerHTML += `<tr data-index = ${i}>
             <td>${element.bookTitle}</td>
@@ -101,7 +100,6 @@ function deleteRow(e){
     displayLiberary();
 }
 function updateRead(e){
-    // console.log(myLibrary[e.target.parentNode.parentNode.dataset.index]);
     myLibrary[e.target.parentNode.parentNode.dataset.index].read = !(myLibrary[e.target.parentNode.parentNode.dataset.index].read)
     localStorage.setItem("mylib",JSON.stringify(myLibrary));
     displayLiberary();
